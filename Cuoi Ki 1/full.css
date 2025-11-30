@@ -1,0 +1,435 @@
+/* --- CSS VARIABLES & RESET --- */
+:root {
+    --primary-color: #f1745e;      /* Màu Header */
+    --text-color: #4f252a;         /* Màu chữ */
+    --bg-color-1: #edd0ac;         /* Nền 1 */
+    --bg-color-2: #fbc3b9;         /* Nền 2 */
+    --footer-color: #3fa3a0;       /* Footer */
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+    color: var(--text-color);
+}
+
+/* --- UTILITIES --- */
+.text-white { color: var(--white) !important; }
+.text-center { text-align: center !important; }
+.pull-right { float: right !important; }
+.mt-8 { margin-top: 8px !important; }
+.mt-16 { margin-top: 16px !important; }
+.row { display: flex; flex-wrap: wrap; margin: 0 -8px; }
+.col { padding: 0 8px; }
+.col-half { width: 50%; }
+.col-full { width: 100%; }
+
+/* --- HEADER & NAV --- */
+#header {
+    height: 46px;
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#nav {
+    display: flex;
+    justify-content: center; /* Center nav items */
+    list-style-type: none;
+}
+
+#nav > li > a {
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+#nav > li > a:hover,
+#nav > li > a.active {
+    background-color: #ccc;
+    color: var(--text-color);
+}
+
+.mobile-menu-btn {
+    display: none; /* Logic cho mobile sẽ thêm sau nếu cần */
+}
+
+/* --- HERO SECTION --- */
+/* --- HERO SECTION (VIDEO VERSION) --- */
+#hero {
+    margin-top: 46px; /* Tránh header che mất */
+    height: 100vh;    /* Chiếm toàn màn hình */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Cắt phần video bị thừa */
+}
+
+/* Định dạng Video nền */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Key technique: Giúp video phủ kín khung hình giống background-size: cover */
+    object-fit: cover; 
+    
+    z-index: 1; /* Nằm dưới cùng */
+}
+
+/* Lớp phủ màu tối giúp chữ nổi bật hơn */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Màu đen độ trong suốt 40% */
+    z-index: 2; /* Nằm trên video */
+}
+
+/* Nội dung chữ */
+.hero-content {
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    z-index: 3; /* Nằm trên cùng, cao nhất */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-content h2 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; }
+.hero-content p { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px;}
+/* --- COMMON CONTENT SECTIONS --- */
+.content-section {
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem 16px; /* 5rem margin top/bottom as requested */
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section-sub-heading {
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.about-text {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* --- REGIONS VISUAL MENU --- */
+.regions-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.region-item {
+    text-align: center;
+    width: 33.333%;
+}
+
+.region-item p { margin-bottom: 15px; font-weight: bold; }
+
+.region-item img {
+    width: 100%;
+    aspect-ratio: 3/4; /* Cao dài hơn rộng */
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* --- TOUR SECTION --- */
+.tour-section {
+    background-color: var(--bg-color-1); /* #edd0ac */
+}
+
+.tour-places {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.place-item {
+    background-color: var(--white);
+    width: 33.333%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.place-img {
+    width: 100%;
+    aspect-ratio: 4/5; /* Cao dài hơn rộng */
+    object-fit: cover;
+    display: block;
+}
+
+.place-img:hover { opacity: 0.6; }
+
+.place-body {
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading { font-size: 15px; font-weight: 600; margin-bottom: 15px; }
+.place-time { margin-bottom: 15px; color: #757575; }
+.place-desc { margin-bottom: 15px; line-height: 1.4; }
+
+.btn {
+    color: var(--white);
+    background-color: var(--black);
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover { color: var(--black); background-color: #ccc; }
+
+/* --- MENU BOARD --- */
+#menu-board {
+    background-color: var(--bg-color-2); /* #fbc3b9 */
+}
+
+.menu-table-container {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.menu-table { width: 100%; border-collapse: collapse; }
+.menu-table th, .menu-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.menu-table tr:hover { background-color: #f5f5f5; }
+
+.tag-hot { background-color: #f44336; color: white; padding: 3px 8px; font-size: 12px; border-radius: 3px; }
+.tag-today { background-color: var(--footer-color); color: white; padding: 3px 8px; font-size: 12px; border-radius: 3px; }
+
+/* --- CONTACT --- */
+.contact-content {
+    display: flex;
+    padding-top: 30px;
+}
+
+.contact-info { width: 50%; font-size: 18px; line-height: 1.6; }
+.contact-info i { width: 30px; display: inline-block; color: var(--primary-color); }
+.contact-form { width: 50%; }
+.form-control { padding: 10px; border: 1px solid #ccc; width: 100%; outline: none; }
+
+/* --- EXTRA IMAGE --- */
+.map-section img {
+    width: 100%;
+    height: 80vh; /* 80% khung hình */
+    object-fit: cover;
+    filter: grayscale(20%);
+    display: block;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--white);
+    height: 30vh; /* 30% khung hình */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.socials-list { font-size: 1.5rem; }
+.socials-list a {
+    color: var(--footer-color); /* #3fa3a0 */
+    text-decoration: none;
+    margin: 0 8px;
+}
+.socials-list a:hover { opacity: 0.7; }
+.copyright { margin-top: 15px; color: #757575; }
+
+/* --- ANIMATION: FADE IN --- */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    will-change: opacity, visibility;
+
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* --- MODAL --- */
+.modal {
+    position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.modal.open { display: flex; }
+
+/* --- CẬP NHẬT CSS CHO MODAL --- */
+
+.modal-container {
+    background: var(--white);
+    width: 900px;
+    max-width: calc(100% - 32px);
+    
+    /* FIX: Giới hạn chiều cao và xử lý bố cục */
+    height: auto;               /* Chiều cao tự động theo nội dung */
+    max-height: 90vh;           /* Quan trọng: Không bao giờ cao quá 90% màn hình */
+    display: flex;              /* Dàn trang flex dọc để chia header/body/footer */
+    flex-direction: column;     
+    
+    position: relative;
+    border-radius: 4px;         /* Bo góc nhẹ cho hiện đại */
+    animation: modalFadeIn ease 0.5s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Thêm bóng đổ cho nổi bật */
+}
+
+.modal-header {
+    background: var(--primary-color);
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--white);
+    
+    /* FIX: Header luôn cố định, không bị co lại */
+    flex-shrink: 0; 
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative; /* Để nút close định vị theo header */
+}
+
+/* --- SỬA LỖI MẤT NÚT CLOSE --- */
+.modal-close {
+    position: absolute;
+    right: 0; 
+    top: 0;
+    color: var(--white);
+    padding: 16px; 
+    cursor: pointer;
+    font-size: 1.5rem; /* Tăng kích thước lên một chút cho dễ nhìn */
+    opacity: 0.8;
+    
+    /* QUAN TRỌNG: z-index cao để nổi lên trên Header */
+    z-index: 10; 
+}
+
+.modal-close:hover {
+    background-color: rgba(0,0,0,0.2); /* Làm tối nền một chút khi di chuột */
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 16px;
+    
+    /* FIX: Chỉ cuộn phần thân nếu nội dung dài */
+    overflow-y: auto; 
+    flex-grow: 1; /* Chiếm hết khoảng trống còn lại */
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+    
+    /* FIX: Footer cố định ở dưới (nếu muốn), hoặc để nó cuộn theo body */
+    /* Ở đây tôi để nó cuộn theo body cho tự nhiên, nên không cần CSS đặc biệt */
+    flex-shrink: 0;
+}
+
+
+.modal-label { display: block; font-size: 15px; margin-bottom: 12px; font-weight: bold; }
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+#buy-tickets {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+}
+#buy-tickets:hover { background: #ccc; color: black; }
+
+.modal-footer { padding: 16px; text-align: right; }
+.price-preview { margin-bottom: 20px; font-weight: bold; font-size: 18px; color: var(--primary-color); text-align: right; }
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-140px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mix Color Button */
+#random-color-btn {
+    margin-top: 15px;
+    padding: 8px 12px;
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .regions-list, .tour-places, .contact-content {
+        flex-direction: column;
+    }
+    .region-item, .place-item, .contact-info, .contact-form {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .col-half { width: 100%; margin-top: 8px; }
+}

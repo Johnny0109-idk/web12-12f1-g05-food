@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khám phá ẩm thực 3 miền Việt Nam - Đặt tour trải nghiệm văn hóa và món ăn đặc sắc.">
+    <title>Ẩm Thực Việt Nam - 3 Miền Hương Sắc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="full.css">
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <ul id="nav">
+                <li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+                <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                <li><a href="#tours" class="nav-link">Tour Ẩm Thực</a></li>
+                <li><a href="#menu-board" class="nav-link">Thực đơn</a></li>
+                <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-btn">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+
+    <section id="hero">
+        <video autoplay muted loop playsinline class="hero-video" poster="./chợ đà lạt.webp">
+            <source src="./videoplayback (1).MOV" type="video/mp4">
+        </video>    
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content fade-in-section">
+            <h2>Hương Vị Việt Nam</h2>
+            <p>Tinh hoa ẩm thực ba miền Bắc - Trung - Nam</p>
+        </div>
+    </section>
+
+        
+
+    <main>
+        <section id="about" class="content-section fade-in-section">
+            <h2 class="section-heading">Về Chúng Tôi</h2>
+            <p class="section-sub-heading">Yêu bếp, nghiện nhà, mê món Việt</p>
+            <p class="about-text">
+                Ẩm thực Việt Nam là bức tranh đa dạng màu sắc. Miền Bắc tinh tế, nhẹ nhàng. Miền Trung đậm đà, cay nồng. Miền Nam ngọt ngào, dân dã. Chúng tôi tạo ra không gian này để kết nối những tâm hồn ăn uống và giới thiệu văn hóa Việt đến bạn bè quốc tế.
+            </p>
+            
+            <div class="regions-list">
+                <div class="region-item">
+                    <p>Tour Sáng</p>
+                    <img src="./Ho chi minh city.jpg" alt="Ẩm thực Miền Bắc" class="region-img">
+                </div>
+                <div class="region-item">
+                    <p>Tour Trưa</p>
+                    <img src="./ăn trưa.jpg" alt="Ẩm thực Miền Trung" class="region-img">
+                </div>
+                <div class="region-item">
+                    <p>Tour Chiều</p>
+                    <img src="./ăn đêm.jpg" alt="Ẩm thực Miền Nam" class="region-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="tours" class="tour-section fade-in-section">
+            <div class="content-section">
+                <h2 class="section-heading text-white">Tour Trải Nghiệm</h2>
+                <p class="section-sub-heading text-white">Đặt vé thưởng thức ngay hôm nay!</p>
+
+                <div class="tour-places">
+                    <div class="place-item">
+                        <img src="./Bún Đậu Mắm Tôm I Traditional Vietnamese food.jpg  " alt="Phở Hà Nội" class="place-img">
+                        <div class="place-body">
+                            <h3 class="place-heading">Hà Nội</h3>
+                            <p class="place-time">Fri 27 Nov 2025</p>
+                            <p class="place-desc">Trải nghiệm Phở Thìn và Cà phê trứng phố cổ.</p>
+                            <button class="btn js-buy-ticket" data-location="Hà Nội">Đặt Vé Ngay</button>
+                        </div>
+                    </div>
+                    <div class="place-item">
+                        <img src="./Banh Trang Tron photograhphy.jpg" alt="Bún Bò Huế" class="place-img">
+                        <div class="place-body">
+                            <h3 class="place-heading">Huế</h3>
+                            <p class="place-time">Sat 28 Nov 2025</p>
+                            <p class="place-desc">Thưởng thức Bún Bò Huế và các loại bánh cung đình.</p>
+                            <button class="btn js-buy-ticket" data-location="Huế">Đặt Vé Ngay</button>
+                        </div>
+                    </div>
+                    <div class="place-item">
+                        <img src="./Bánh Mì Trạng x Visual Taste - Visual Taste.jpg" alt="Cơm Tấm Sài Gòn" class="place-img">
+                        <div class="place-body">
+                            <h3 class="place-heading">Sài Gòn</h3>
+                            <p class="place-time">Sun 29 Nov 2025</p>
+                            <p class="place-desc">Cơm tấm đêm và street food chợ Bến Thành.</p>
+                            <button class="btn js-buy-ticket" data-location="Sài Gòn">Đặt Vé Ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu-board" class="content-section fade-in-section">
+            <h2 class="section-heading">Thực Đơn Phổ Biến</h2>
+            <p class="section-sub-heading">Hương vị được yêu thích nhất</p>
+            
+            <div class="menu-table-container">
+                <table class="menu-table">
+                    <thead>
+                        <tr>
+                            <th>Món Ăn</th>
+                            <th>Giá</th>
+                            <th>Trạng Thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Phở Bò Tái Nạm</td>
+                            <td>1 Tỉ</td>
+                            <td><span class="tag-hot">Hot!</span></td>
+                        </tr>
+                        <tr>
+                            <td>Bánh Xèo Tôm Nhảy</td>
+                            <td>2 Múp míp</td>
+                            <td>Phổ biến</td>
+                        </tr>
+                        <tr>
+                            <td>Canh Chua Cá Lóc</td>
+                            <td>Cá Lock</td>
+                            <td>Mới</td>
+                        </tr>
+                        <tr>
+                            <td>Bún Chả</td>
+                            <td>Chả ngon</td>
+                            <td><span class="tag-today">Món trong ngày</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section fade-in-section">
+            <h2 class="section-heading">Liên Hệ</h2>
+            <p class="section-sub-heading">Bạn có câu hỏi? Đừng ngại liên hệ chúng tôi!</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><i class="fa fa-map-marker-alt"></i> TP HCM, Việt Nam</p>
+                    <p><i class="fa fa-phone"></i> Phone: 0966776677</p>
+                    <p><i class="fa fa-envelope"></i> Email: thichlamgiau@gmail.com</p>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col col-half">
+                                <input type="text" id="contactName" placeholder="Tên" class="form-control">
+                            </div>
+                            <div class="col col-half">
+                                <input type="email" id="contactEmail" placeholder="Email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mt-8">
+                            <div class="col col-full">
+                                <input type="text" id="contactMessage" placeholder="Câu hỏi của bạn..." class="form-control">
+                            </div>
+                        </div>
+                        <input class="btn pull-right mt-16" type="submit" value="GỬI ĐI">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="map-section fade-in-section">
+            <img src="./chợ châu đốc.jpg" alt="Việt Nam Landscape">
+        </div>
+    </main>
+
+    <footer>
+        <div class="socials-list">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> concept</p>
+        <button id="random-color-btn" title="Đổi màu ngẫu nhiên"><i class="fa fa-palette"></i> Mix Color</button>
+    </footer>
+
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="fa fa-times"></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="fa fa-suitcase mr-16"></i>
+                Đặt Tour <span id="modal-city-name"></span>
+            </header>
+
+            <div class="modal-body">
+                <label for="ticket-quantity" class="modal-label">
+                    <i class="fa fa-shopping-cart"></i>
+                    Số người (200,000đ/người)
+                </label>
+                <input id="ticket-quantity" type="number" class="modal-input" placeholder="Bạn đi bao nhiêu người?" min="1">
+
+                <label for="ticket-dish" class="modal-label">
+                    <i class="fa fa-utensils"></i>
+                    Món ăn muốn trải nghiệm
+                </label>
+                <input id="ticket-dish" type="text" class="modal-input" placeholder="Ví dụ: Phở, Bánh mì...">
+
+                <label for="ticket-email" class="modal-label">
+                    <i class="fa fa-user"></i>
+                    Gửi vé tới Email
+                </label>
+                <input id="ticket-email" type="email" class="modal-input" placeholder="Nhập email...">
+
+                <div class="price-preview">
+                    Tổng cộng: <span id="total-price">0</span> VND
+                </div>
+
+                <button id="buy-tickets">
+                    Xác nhận Booking <i class="fa fa-check"></i>
+                </button>
+            </div>
+
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="#">help?</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="FULL.js"></script>
+</body>
+</html>

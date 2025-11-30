@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Vietnam Food Theme</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- External CSS -->
+<link rel="stylesheet" href="./Tem.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top nav-container">
+  <div class="w3-bar nav-bar w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large menu-toggle" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
+        <a href="#" class="w3-bar-item w3-button">Extras</a>
+        <a href="#" class="w3-bar-item w3-button">Media</a>
+      </div>
+    </div>
+
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right search-icon"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-hide w3-top mobile-nav">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content main-content">
+
+  <!-- Slide Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="./BÁNH MÌ VIỆT NAM.jpg" class="slide-img">
+  </div>
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="./Bún Đậu Mắm Tôm I Traditional Vietnamese food.jpg" class="slide-img">
+  </div>
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="./Banh Trang Tron photograhphy.jpg" class="slide-img">
+  </div>
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center section" id="band">
+    <h2 class="w3-wide">THE BAND</h2>
+    <p class="w3-opacity"><i>We love music</i></p>
+
+    <p class="desc-text">
+      We have created a fictional band website. Lorem ipsum dolor sit amet...
+    </p>
+
+    <div class="w3-row member-row">
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="member-img">
+      </div>
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="member-img">
+      </div>
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="member-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- The Tour Section -->
+  <div class="tour-section" id="tour">
+    <div class="w3-container w3-content tour-container">
+      <h2 class="w3-wide w3-center">TOUR DATES</h2>
+      <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey tour-list">
+        <li class="w3-padding">September <span class="badge-red">Sold out</span></li>
+        <li class="w3-padding">October <span class="badge-red">Sold out</span></li>
+        <li class="w3-padding">November <span class="badge-number">3</span></li>
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32 tour-cards">
+        <div class="w3-third">
+          <img src="/w3images/newyork.jpg" class="tour-img">
+          <div class="w3-container card-body">
+            <p><b>New York</b></p>
+            <p class="w3-opacity">Fri 27 Nov 2016</p>
+            <button class="w3-button buy-btn">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-third">
+          <img src="/w3images/paris.jpg" class="tour-img">
+          <div class="w3-container card-body">
+            <p><b>Paris</b></p>
+            <p class="w3-opacity">Sat 28 Nov 2016</p>
+            <button class="w3-button buy-btn">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-third">
+          <img src="/w3images/sanfran.jpg" class="tour-img">
+          <div class="w3-container card-body">
+            <p><b>San Francisco</b></p>
+            <p class="w3-opacity">Sun 29 Nov 2016</p>
+            <button class="w3-button buy-btn">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-content section" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+
+    <div class="w3-row contact-row">
+      <div class="w3-col m6 contact-left">
+        <i class="fa fa-map-marker"></i> Chicago, US<br>
+        <i class="fa fa-phone"></i> +00 151515<br>
+        <i class="fa fa-envelope"></i> mail@mail.com<br>
+      </div>
+
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="form-row">
+            <div class="w3-half">
+              <input class="w3-input input-box" type="text" placeholder="Name" required>
+            </div>
+            <div class="w3-half">
+              <input class="w3-input input-box" type="text" placeholder="Email" required>
+            </div>
+          </div>
+          <input class="w3-input input-box" type="text" placeholder="Message" required>
+          <button class="w3-button send-btn" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <i class="fa fa-facebook-official"></i>
+  <i class="fa fa-instagram"></i>
+  <i class="fa fa-snapchat"></i>
+  <i class="fa fa-pinterest-p"></i>
+  <i class="fa fa-twitter"></i>
+  <i class="fa fa-linkedin"></i>
+</footer>
+
+<script>
+// Slideshow
+var myIndex = 0;
+carousel();
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) { x[i].style.display = "none"; }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);
+}
+</script>
+
+</body>
+</html>
