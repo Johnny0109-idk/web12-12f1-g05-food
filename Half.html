@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3 - Ẩm Thực Việt Nam</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./half.css">
+</head>
+<body>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-card" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="toggleMobileMenu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">TRANG CHỦ</a>
+            <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GIỚI THIỆU</a>
+            <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ĐẶT TOUR</a>
+            <a href="#menu" class="w3-bar-item w3-button w3-padding-large w3-hide-small">THỰC ĐƠN</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LIÊN HỆ</a>
+            
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+        </div>
+        
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top header-offset">
+            <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMobileMenu()">GIỚI THIỆU</a>
+            <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMobileMenu()">ĐẶT TOUR</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMobileMenu()">LIÊN HỆ</a>
+        </div>
+    </div>
+
+    <div class="w3-display-container w3-center header-offset hero-container">
+        <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200" class="hero-video">
+            <source src="./videoplayback (1).MOV" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        
+        <div class="hero-content w3-text-white">
+            <h2 class="w3-jumbo w3-animate-top"><b>HƯƠNG VỊ VIỆT</b></h2>
+            <p class="w3-opacity w3-xxlarge w3-animate-bottom"><i>Tinh hoa 3 Miền</i></p>
+        </div>
+    </div>
+
+    <div class="w3-content main-wrapper">
+
+        <div class="w3-container w3-content w3-center w3-padding-64 content-limit" id="about">
+            <h2 class="w3-wide">Thích đồ ăn</h2>
+            <p class="w3-opacity"><i>Yêu vị bếp nhà</i></p>
+            <p class="w3-justify">Ẩm thực Việt Nam là bức tranh đa dạng màu sắc. Miền Bắc tinh tế, nhẹ nhàng. Miền Trung đậm đà, cay nồng. Miền Nam ngọt ngào, dân dã. Chúng tôi tạo ra không gian này để kết nối những tâm hồn ăn uống và giới thiệu văn hóa Việt đến bạn bè quốc tế.</p>
+            
+            <div class="w3-row-padding w3-padding-32 row-padding-fix">
+                <div class="w3-third">
+                    <p class="region-text">Ăn Sáng</p>
+                    <img src="./gỏi khô bò.jpg" class="w3-round w3-margin-bottom region-img" alt="Bac">
+                </div>
+                <div class="w3-third">
+                    <p class="region-text">Ăn Trưa</p>
+                    <img src="./phá lấu.jpeg" class="w3-round w3-margin-bottom region-img" alt="Trung">
+                </div>
+                <div class="w3-third">
+                    <p class="region-text">Ăn Tối</p>
+                    <img src="./ốc.jpeg" class="w3-round region-img" alt="Nam">
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-bg-1" id="tour">
+            <div class="w3-container w3-content w3-padding-64 content-limit">
+                <h2 class="w3-wide w3-center">TOUR TRẢI NGHIỆM</h2>
+                <p class="w3-opacity w3-center"><i>Đặt vé ngay hôm nay!</i></p><br>
+
+                <div class="w3-row-padding w3-padding-32 row-flex row-padding-fix">
+                    <div class="w3-third w3-margin-bottom col-flex">
+                        <img src="./Banh Trang Tron photograhphy.jpg" alt="Hanoi" class="w3-hover-opacity tour-image">
+                        <div class="w3-container w3-white content-flex">
+                            <p><b>Hà Nội</b></p>
+                            <p class="w3-opacity">Fri 27 Nov 2025</p>
+                            <p>Đồ ăn đường phố, ăn vặt lề đường</p>
+                            <button class="w3-button w3-black w3-margin-bottom" onclick="openModal('Hà Nội')">Đặt Vé</button>
+                        </div>
+                    </div>
+
+                    <div class="w3-third w3-margin-bottom col-flex">
+                        <img src="./Bánh Mì Trạng x Visual Taste - Visual Taste.jpg" alt="Hue" class="w3-hover-opacity tour-image">
+                        <div class="w3-container w3-white content-flex">
+                            <p><b>Huế</b></p>
+                            <p class="w3-opacity">Sat 28 Nov 2025</p>
+                            <p>Các loại đồ ăn sáng, từ khô đến nước</p> 
+                            <button class="w3-button w3-black w3-margin-bottom" onclick="openModal('Huế')">Đặt Vé</button>
+                        </div>
+                    </div>
+
+                    <div class="w3-third w3-margin-bottom col-flex">
+                        <img src="./Bún Đậu Mắm Tôm I Traditional Vietnamese food.jpg" alt="Saigon" class="w3-hover-opacity tour-image">
+                        <div class="w3-container w3-white content-flex">
+                            <p><b>Sài Gòn</b></p>
+                            <p class="w3-opacity">Sun 29 Nov 2025</p>
+                            <p>Cơm tấm đêm và đồ ăn đường phố chợ Bến Thành.</p>
+                            <button class="w3-button w3-black w3-margin-bottom" onclick="openModal('Sài Gòn')">Đặt Vé</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu" class="custom-bg-2">
+        <div class="w3-container w3-content w3-padding-64 content-limit">
+            <h2 class="w3-wide w3-center">THỰC ĐƠN HOT</h2>
+            
+            <table class="w3-table w3-white w3-bordered w3-striped w3-card-4 w3-margin-top">
+                <thead class="custom-header-color w3-text-white">
+                    <tr>
+                        <th>Món Ăn</th>
+                        <th>Vùng Miền</th>
+                        <th>Ghi Chú</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phở Bò</td>
+                        <td>Bắc</td>
+                        <td><span class="w3-tag w3-red">Hot</span></td>
+                    </tr>
+                    <tr>
+                        <td>Bánh Xèo</td>
+                        <td>Trung</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Cơm Tấm</td>
+                        <td>Nam</td>
+                        <td><span class="w3-tag w3-teal">Cơ bản</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="contact" class="custom-bg-3">
+        <div class="w3-container w3-content w3-padding-64 content-limit">
+            <h2 class="w3-wide w3-center">LIÊN HỆ</h2>
+            <p class="w3-opacity w3-center"><i>Hãy để lại 1 tim</i></p>
+            
+            <div class="w3-row w3-padding-32">
+                <div class="w3-col m6 w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker contact-icon"></i> Hanoi, VN<br>
+                    <i class="fa fa-phone contact-icon"></i> Phone: 0966776677<br>
+                    <i class="fa fa-envelope contact-icon"> </i> Email: ngons1tgioi@mail.com<br>
+                </div>
+                <div class="w3-col m6">
+                    <form action="/action_page.php" target="_blank">
+                        <div class="w3-row-padding form-row-padding">
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Tên" required name="Name">
+                            </div>
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                            </div>
+                        </div>
+                        <input class="w3-input w3-border" type="text" placeholder="Tin nhắn" required name="Message">
+                        <button class="w3-button w3-black w3-section w3-right" type="submit">GỬI ĐI</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<img src="./chợ châu đốc.jpg" class="w3-greyscale-min full-width-banner" alt="Footer Img">
+
+
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <i class="fab fa-facebook-square w3-hover-opacity"></i>
+        <i class="fab fa-instagram w3-hover-opacity"></i>
+        <i class="fab fa-snapchat w3-hover-opacity"></i>
+        <i class="fab fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fab fa-twitter w3-hover-opacity"></i>
+        <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        <button class="w3-button w3-small w3-round-large w3-dark-grey" onclick="mixColor()">Mix Color</button>
+    </footer>
+
+    <div id="ticketModal" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+            <header class="w3-container custom-header-color w3-center w3-padding-32 w3-text-white w3-relative"> 
+                <span onclick="document.getElementById('ticketModal').style.display='none'" 
+                class="w3-button custom-header-color w3-xlarge w3-display-topright">×</span>
+                <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Mua Vé</h2>
+            </header>
+            <div class="w3-container">
+                <p><label><i class="fa fa-shopping-cart"></i> Vé, 15$/1 người</label></p>
+                <input class="w3-input w3-border" type="number" placeholder="Bao nhiêu người?">
+                <p><label><i class="fa fa-user"></i> Gửi tới</label></p>
+                <input class="w3-input w3-border" type="text" placeholder="Nhập email">
+                <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">Thanh toán <i class="fa fa-check"></i></button>
+                <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Đóng <i class="fa fa-remove"></i></button>
+                <p class="w3-right">Cần <a href="#" class="w3-text-blue">giúp đỡ</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./HALF.js"></script>
+
+</body>
+</html>

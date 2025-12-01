@@ -1,0 +1,187 @@
+/* =========================================
+   1. VARIABLES & GLOBAL SETTINGS
+   ========================================= */
+:root {
+    --primary-header: #f1745e;
+    --bg-color-1: #edd0ac;
+    --bg-color-2: #fbc3b9;
+    --bg-color-3: #ead292;
+    --text-color: #4f252a;
+    --footer-color: #3fa3a0;
+}
+
+body { 
+    font-family: "Lato", sans-serif; 
+    color: var(--text-color); 
+}
+
+/* =========================================
+   2. UTILITY CLASSES (Thay thế Inline Styles)
+   ========================================= */
+
+/* Class thay cho style="max-width:2000px" */
+.main-wrapper {
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Class thay cho style="max-width:800px" */
+.content-limit {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Class thay cho style="margin-top: 46px" */
+.header-offset {
+    margin-top: 46px;
+}
+
+/* Class thay cho style="margin:0 -16px" */
+.row-padding-fix {
+    margin: 0 -16px;
+}
+
+/* Class thay cho style="width:30px" trong icon liên hệ */
+.contact-icon {
+    width: 30px;
+}
+
+/* Class thay cho style="width:100%" ảnh cuối trang */
+.full-width-banner {
+    width: 100%;       /* Ép buộc chiếm hết chiều ngang màn hình */
+    height: auto;      /* Chiều cao tự động theo tỷ lệ */
+    display: block;    /* Loại bỏ khoảng trắng thừa dưới chân */
+    object-fit: cover; /* (Tùy chọn) Nếu ảnh bị kéo giãn quá mức, dùng cái này để cắt bớt */
+}
+
+/* =========================================
+   3. COMPONENT STYLES
+   ========================================= */
+
+/* --- HEADER FIX --- */
+.w3-top {
+    /* QUAN TRỌNG: Phải có dòng này để nav bar cha có màu nền */
+    background-color: var(--primary-header) !important;
+    
+    z-index: 99 !important; /* Đảm bảo luôn nổi trên cùng */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Thêm chút bóng đổ cho đẹp */
+}
+
+#myNavbar { 
+    /* Màu nền cho thanh bar con */
+    background-color: var(--primary-header) !important; 
+    color: white; 
+    box-shadow: none; /* Bỏ bóng con vì đã có bóng cha */
+}
+
+.custom-header-color { background-color: var(--primary-header) !important; }
+
+/* Background Colors */
+.custom-bg-1 { background-color: var(--bg-color-1); }
+.custom-bg-2 { background-color: var(--bg-color-2); }
+.custom-bg-3 { background-color: var(--bg-color-3); } /* Đã sửa lỗi chính tả */
+
+/* --- HERO SECTION FIX (VIDEO) --- */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 46px); 
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+/* Class thay cho style="z-index:3" */
+.hero-content {
+    z-index: 2;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+/* --- IMAGE STYLES --- */
+/* Ảnh 3 miền */
+.region-img {
+    width: 100%;
+    aspect-ratio: 3/4; /* Dọc */
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.region-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Ảnh Tour */
+.tour-image {
+    width: 100%;
+    aspect-ratio: 4/5; /* Dọc */
+    object-fit: cover;
+    display: block;
+}
+
+/* --- FLEXBOX & TEXT COLORS --- */
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-flex {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-flex .w3-button {
+    margin-top: auto;
+}
+
+#tour h2, 
+#tour p.w3-opacity {
+    color: var(--text-color) !important;
+}
+
+#contact {
+    margin-bottom: 64px; /* Vẫn giữ khoảng trắng, nhưng vì #contact giờ là full-width nên nó sẽ đẩy cả khối màu lên, lộ ra màu trắng của body bên dưới -> ĐÚNG Ý BẠN */
+}
+
+/* --- CLEAN CODE UTILITIES (Fix nốt các lỗi inline còn sót) --- */
+
+/* Thay cho style="width:30px" của Icon */
+.contact-icon {
+    width: 30px;
+    text-align: center; /* Căn giữa icon cho đẹp */
+    color: var(--primary-header); /* Đồng bộ màu icon với theme */
+}
+
+/* Thay cho style="margin:0 -16px 8px -16px" của Form */
+.form-row-padding {
+    margin: 0 -16px 8px -16px;
+}
